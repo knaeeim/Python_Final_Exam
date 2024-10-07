@@ -288,10 +288,10 @@ while True:
 
             elif choice == "7":
                 account_number = input("Enter your account number : ")
-                to_account_number = input("Enter the account number where you eant to transfer : ")
+                to_account_number = input("Enter the account number where you want to transfer : ")
                 amount = int(input("Enter the amount that you want to tranfer : "))
                 print()
-                if account_number in admin.account_info and to_account_number in admin.account_info:
+                if account_number in admin.account_info and to_account_number in admin.account_info and account_number != to_account_number:
                     user = admin.account_info[account_number]
                     to_account = admin.account_info[to_account_number]
                     user.transfer_money(amount, to_account)
