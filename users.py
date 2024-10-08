@@ -78,7 +78,7 @@ class UserAction(User):
         self.__balance -= amount
         to_account.__balance += amount
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.transaction_history.append(f"Transaction Type: Transfer, {amount} has been transfered to account no :{self.to_account} at {current_time}")
+        self.transaction_history.append(f"Transaction Type: Transfer, {amount} has been transfered to account no :{to_account.account_number} at {current_time}")
         print(f"Amount :{amount} has been transferred to account number : {to_account.account_number}successfully")
 
 class Admin(User):
